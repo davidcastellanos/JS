@@ -3,6 +3,7 @@ import { gestionarMensajes } from './pedirDatos.js';
 
 const objetoMensajes = gestionarMensajes();
 //console.log(datosEstudiantes);
+//console.log(datosEstudiantes[0].nombre);
 let { mostrarMensaje, pedirNotas } = objetoMensajes;
 //console.log(mostrarMensaje);
 let contador = 1;
@@ -38,7 +39,7 @@ Nota de 0 a 10 para el Exámen Final.`;
     contador++;
   }
 
-  console.log(arrayNotas);
+  //console.log(arrayNotas);
 
   datosEstudiantes[0].definitiva =
     arrayNotas[0] * 0.2 + arrayNotas[3] * 0.2 + arrayNotas[6] * 0.6;
@@ -49,11 +50,11 @@ Nota de 0 a 10 para el Exámen Final.`;
   datosEstudiantes[2].definitiva =
     arrayNotas[2] * 0.2 + arrayNotas[5] * 0.2 + arrayNotas[8] * 0.6;
 
-  console.log(datosEstudiantes[0].definitiva);
-  console.log(datosEstudiantes);
+  // console.log(datosEstudiantes[0].definitiva);
+  // console.log(datosEstudiantes);
 
   for (const estudiante of datosEstudiantes) {
-    console.log(estudiante.definitiva);
+    // console.log(estudiante.definitiva);
     estudiante.definitiva >= 7
       ? (resultado = `Aprueba`)
       : (resultado = `Desaprueba`);
